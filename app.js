@@ -59,6 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     turn.innerText = "Game Over, Blue is Winner"
                 }
                 gameOver = true
+                let cells = document.getElementsByClassName("cell")
+                // console.log(cells[0])
+                for(let i=0; i<cells.length; i++){
+                    cells[i].style.cursor = "not-allowed"
+                }
                 return true
             }
         }
@@ -79,7 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Click 
     function click(e, rec){
-        if(gameOver) return
+        if(gameOver) {
+           
+            return
+        }
         // console.log(matrix)
         // Extracting row and column
         const elementID = parseInt(e.id);
