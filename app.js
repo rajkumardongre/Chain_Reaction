@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Click 
     function click(e, rec){
-        
+        if(gameOver) return
         // console.log(matrix)
         // Extracting row and column
         const elementID = parseInt(e.id);
